@@ -47,11 +47,11 @@ td
 
 
 #body
-  clear: both
+  +grid(8,16)
+  +grid-suffix(1,16)
+  +omega
   margin: 0 auto
   padding: 10px
-  width: 800px
-
 
 #footer
   color: #999
@@ -85,11 +85,15 @@ h1
 
 
 #tabhead
+  +grid-prefix(1,16)
+  +grid(14,16)
+  +grid-suffix(1,16)
   position: relative
-  background: #035 url('/site_media/pinax/images/heading.png') left top repeat-x
-  border-bottom: 1px solid #000
+  padding-bottom: 3px
 
   .logo
+    background: #035 url('/site_media/pinax/images/heading.png') left top repeat-x
+    border-bottom: 1px solid #000
     height: 80px
     padding-left: 5px
     padding-top: 0
@@ -99,10 +103,10 @@ h1
       height: 79px
 
   .login
+    color: #DEF
     position: absolute
     top: 6px
-    right: 15px
-    color: #DEF
+    right: 75px
 
     a
       color: #DEF
@@ -309,14 +313,17 @@ table.messages
 
 
 #subnav
-  margin: 0
+  +grid(2,16)
   padding: 0
   background: #DEF
+  border-top: 1px solid #9BC
+  border-right: 1px solid #9BC
   border-bottom: 1px solid #9BC
+  margin: 0 0 0 -13px
 
   ul
     float: right
-    margin: 0 20px
+    /* margin: 0 20px */
     padding: 0
 
     li
@@ -329,7 +336,7 @@ table.messages
         font-weight: bold
         text-decoration: none
         color: #444
-        padding: 4px 20px
+        padding: 4px /* 20px */
 
       &:hover
         color: #FFF
