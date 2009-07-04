@@ -3,9 +3,12 @@
 {% load i18n %}
 {% load uni_form %}
 
+<div class="box-header">
 {% block head_title %}{% blocktrans %}Latest Photos{% endblocktrans %}{% endblock %}
+</div>
 
 {% block body %}
+<div class="box-content">
     <form class="uniForm" id="edit-profile" method="POST" enctype="multipart/form-data" action="">
         <fieldset class="inlineLabels">
             {{ photo_form|as_uni_form }}
@@ -15,4 +18,5 @@
             </div>
         </fieldset>
     </form>
+</div>
 {% endblock %}

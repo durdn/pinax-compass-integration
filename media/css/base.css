@@ -16,7 +16,11 @@ q:before, q:after, blockquote:before, blockquote:after { content: ""; }
 
 img a { border: none; }
 
-body { margin-left: auto; margin-right: auto; width: 960px; background-color: #FFF; }
+body { margin-left: auto; margin-right: auto; width: 960px; background-color: #111111; line-height: 1.5; }
+body h1 { margin: 0 0 0 0; padding: 0 0 0 0; font-size: 36px; color: white; display: inline; }
+body h1 #color1 { color: #ff8b1f; display: inline; }
+body h1 a { color: white; text-decoration: none; }
+body h1 a:visited { color: white; }
 
 html { height: 100%; }
 
@@ -33,9 +37,15 @@ table { border-collapse: collapse; border-spacing: 0; border: 0; font-size: inhe
 
 td { margin: 0; border: 0; padding: 0; }
 
-#body { clear: both; margin: 0 auto; padding: 10px; width: 800px; }
+#body { background-color: #eeeeee; padding: 15px 15px 15px 15px; margin-bottom: 10px; margin-top: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; /* :behavior url(../js/border-radius.htc) */ }
+#body .box-header { padding-top: 10px; padding-left: 10px; padding-right: 10px; border: 1px solid #ccc; background-color: #111111; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; }
+#body .box-header h3 { color: #ff8b1f; font-size: 22px; font-weight: bold; background-color: #111111; margin-bottom: 5px; }
+#body .box-header h3 a { color: #ff8b1f; text-decoration: none; }
+#body .box-header h3 a:visited { color: #ff8b1f; }
+#body .box-content { padding: 10px 10px 10px 10px; border: 1px solid #ccc; background-color: white; -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px; -webkit-border-bottom-left-radius: 10px; -webkit-border-bottom-right-radius: 10px; }
+#body .box-content h3 { font-size: 22px; font-weight: bold; margin-bottom: 5px; }
 
-#footer { color: #999; margin: 50px auto; padding: 10px; clear: both; width: 800px; }
+#footer { color: #999; margin: 10px auto; padding: 10px; }
 #footer a { color: #444; }
 #footer a:visited { color: #444; }
 #footer a:hover { color: #777; }
@@ -43,12 +53,18 @@ td { margin: 0; border: 0; padding: 0; }
 #site_wide_announcements { background: yellow; padding: 10px; text-align: center; }
 #site_wide_announcements ul { padding: 0; margin: 0; }
 
-h1 { margin: 0; }
+.title { margin-top: 15px; margin-bottom: 15px; }
 
-#tabhead { position: relative; background: #035 url('/site_media/pinax/images/heading.png') left top repeat-x; border-bottom: 1px solid #000; }
+#tabhead { background-color: #eeeeee; padding: 15px 15px 15px 15px; margin-bottom: 10px; margin-top: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; /* :behavior url(../js/border-radius.htc) */ position: relative; }
+#tabhead .box-header { padding-top: 10px; padding-left: 10px; padding-right: 10px; border: 1px solid #ccc; background-color: #111111; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; }
+#tabhead .box-header h3 { color: #ff8b1f; font-size: 22px; font-weight: bold; background-color: #111111; margin-bottom: 5px; }
+#tabhead .box-header h3 a { color: #ff8b1f; text-decoration: none; }
+#tabhead .box-header h3 a:visited { color: #ff8b1f; }
+#tabhead .box-content { padding: 10px 10px 10px 10px; border: 1px solid #ccc; background-color: white; -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px; -webkit-border-bottom-left-radius: 10px; -webkit-border-bottom-right-radius: 10px; }
+#tabhead .box-content h3 { font-size: 22px; font-weight: bold; margin-bottom: 5px; }
 #tabhead .logo { height: 80px; padding-left: 5px; padding-top: 0; }
 #tabhead .logo img { width: 190px; height: 79px; }
-#tabhead .login { position: absolute; top: 6px; right: 15px; color: #DEF; }
+#tabhead .login { position: absolute; top: 20px; right: 30px; color: #aaaaaa; }
 #tabhead .login a { color: #DEF; }
 #tabhead .login a:visited { color: #DEF; }
 #tabhead .login a:hover { color: #FFF; }
@@ -79,7 +95,7 @@ table.email_list td { padding: 5px 10px; }
 table.invitation_list, table.contact_list { width: 500px; }
 table.invitation_list td, table.contact_list td { padding: 5px 10px; }
 
-.friendship_request { padding: 5px; background: #DEF; border: 1px solid #9BC; }
+.friendship_request { padding: 5px; background: #aaaaaa; border: 1px solid #9BC; }
 .friendship_request p, .friendship_request form { padding: 0; margin: 0; }
 .friendship_request p.invitation_message { font-size: 12pt; margin: 5px; }
 
@@ -114,7 +130,7 @@ table.messages tbody tr { border-bottom: 1px solid #ccc; }
 table.messages tr th, table.messages tr td { text-align: left; padding: 5px; }
 table.messages tr th { font-weight: bold; border-bottom: 1px solid #999; }
 
-#subnav { margin: 0; padding: 0; background: #DEF; border-bottom: 1px solid #9BC; }
+#subnav { margin: 0; padding: 0; background: #aaaaaa; border-bottom: 1px solid #9BC; }
 #subnav ul { float: right; margin: 0 20px; padding: 0; }
 #subnav ul li { display: inline; list-style-type: none; }
 #subnav ul a:link, #subnav ul a:visited { float: left; font-weight: bold; text-decoration: none; color: #444; padding: 4px 20px; }
@@ -126,17 +142,17 @@ dl.message-header dd { float: left; }
 
 div.right_panel { margin-top: 20px; width: 200px; float: right; z-index: 999; }
 div.left_panel { width: 550px; }
-div.friends { background: #DEF; padding: 8px; margin-bottom: 20px; }
+div.friends { background: #aaaaaa; padding: 8px; margin-bottom: 20px; }
 div.friends h2 { margin: 0 0 5px 0; padding: 0; }
 div.friends .avatar { padding: 0; text-align: center; }
 div.friends .details { text-align: center; overflow: hidden; width: 60px; margin: 0 0 12px 0; }
-div.tribes { background: #DEF; padding: 8px; margin-bottom: 20px; }
+div.tribes { background: #aaaaaa; padding: 8px; margin-bottom: 20px; }
 div.tribes h2 { margin: 0 0 5px 0; padding: 0; }
-div.members { background: #DEF; padding: 8px; margin-bottom: 20px; }
+div.members { background: #aaaaaa; padding: 8px; margin-bottom: 20px; }
 div.members h2 { margin: 0 0 5px 0; padding: 0; }
 div.members .avatar { padding: 0; text-align: center; }
 div.members .details { text-align: center; overflow: hidden; width: 60px; margin: 0 0 12px 0; }
-div.notice_settings { background: #DEF; padding: 8px; margin: 20px 0; }
+div.notice_settings { background: #aaaaaa; padding: 8px; margin: 20px 0; }
 div.notice_settings h2 { margin: 0 0 5px 0; padding: 0; }
 div.tweet { width: 500px; margin: 0; padding: 5px; border-bottom: 1px solid #CCC; font-size: 12pt; }
 div.tweet .timesince { color: #999; font-size: 80%; }
@@ -266,7 +282,7 @@ legend { padding: 0 .4em; font-weight: bold; font-size: 1.2em; }
 .signupform { float: left; }
 
 .form-toggle p { margin-bottom: 2px; }
-.form-toggle p span { background: #DEF; padding: 3px 6px; border-top: 1px solid #9BC; border-left: 1px solid #9BC; border-right: 1px solid #9BC; cursor: pointer; }
+.form-toggle p span { background: #aaaaaa; padding: 3px 6px; border-top: 1px solid #9BC; border-left: 1px solid #9BC; border-right: 1px solid #9BC; cursor: pointer; }
 .form-toggle form { padding: 3px 6px; margin: 0; background: #DEF; border: 1px solid #9BC; }
 
 div#ymap { width: 350px; height: 200px; float: right; border: 1px solid gray; }

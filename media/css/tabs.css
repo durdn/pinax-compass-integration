@@ -1,0 +1,9 @@
+#tabhead .tabs { bottom: -1px; left: 210px; }
+#tabhead .tabs td { vertical-align: bottom; padding-right: 0; padding-bottom: 1px; }
+#tabhead .tab a { color: #444; font-weight: bold; text-decoration: none; }
+#tabhead .tab a:visited { color: #444; font-weight: bold; text-decoration: none; }
+#tabhead .tab a:hover { color: #666; }
+#tabhead .tab div { background-color: #DDD; padding: 0; padding-bottom: 4px; padding-top: 5px; margin: 0 1px; }
+#tabhead .tab div a { padding: 5px 12px; }
+#tabhead .right_tab { right: 15px; bottom: -1px; }
+#tabhead .right_tab td { vertical-align: bottom; padding-right: 0; padding-bottom: 1px; }

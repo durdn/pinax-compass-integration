@@ -3,9 +3,90 @@
 
 +global-reset
 
+!background_content_color = #fff
+!background_color = #111111
+!background_frame_color = #eeeeee
+!title_main_color = #ff8b1f
+!title_main_color_1 = #fff
+!footer_color = #aaa
+!signature = #ff8b1f
+!subnav_bg = #aaa
+!secondary = #aaa
+
+=curved
+  :-moz-border-radius 10px
+  :-webkit-border-radius 10px
+  /* :behavior url(../js/border-radius.htc) */
+
+
+=curved-top
+  :-moz-border-radius-topleft 10px
+  :-moz-border-radius-topright 10px
+  :-webkit-border-top-left-radius 10px
+  :-webkit-border-top-right-radius 10px
+
+=curved-bottom
+  :-moz-border-radius-bottomleft 10px
+  :-moz-border-radius-bottomright 10px
+  :-webkit-border-bottom-left-radius 10px
+  :-webkit-border-bottom-right-radius 10px
+
+=zero-margin
+  :margin 0 0 0 0
+  :padding 0 0 0 0
+
+=box
+  :background-color = !background_frame_color
+  :padding 15px 15px 15px 15px
+  :margin-bottom 10px
+  :margin-top 10px
+  +curved
+  .box-header
+    :padding-top 10px
+    :padding-left 10px
+    :padding-right 10px
+    :border  1px solid #ccc
+    :background-color = !background_color
+    +curved-top
+    h3
+      :color = !title_main_color
+      :font-size 22px
+      :font-weight bold
+      :background-color = !background_color
+      :margin-bottom 5px
+      a
+        :color = !title_main_color
+        :text-decoration none
+        &:visited
+          :color = !title_main_color
+  .box-content
+    :padding 10px 10px 10px 10px
+    :border  1px solid #ccc
+    :background-color = !background_content_color
+    +curved-bottom
+    h3
+      :font-size 22px
+      :font-weight bold
+      :margin-bottom 5px
+
 body
   +grid-container
-  background-color: #FFF
+  :background-color = !background_color
+  :line-height 1.5
+  h1
+    +zero-margin
+    :font-size 36px
+    :color = !title_main_color_1    
+    :display inline
+    #color1
+      :color = !title_main_color      
+      :display inline
+    a
+      :color = !title_main_color_1
+      :text-decoration none
+      &:visited
+        :color = !title_main_color_1
+
 
 html
   height: 100%
@@ -17,28 +98,26 @@ body
   font-family: "Helvetica Neue", Arial, sans-serif
   font-size: 10pt
 
-
 a
-  color: #13C
+  :color #13C
 
   &:visited
-    color: #13C
+    :color #13C
 
 
 img
-  border: 0
+  :border 0
 
 
 dt
-  font-weight: bold
+  :font-weight bold
 
 
 table
-  border-collapse: collapse
-  border-spacing: 0
-  border: 0
-  font-size: inherit
-
+  :border-collapse collapse
+  :border-spacing 0
+  :border 0
+  :font-size inherit
 
 td
   margin: 0
@@ -47,27 +126,18 @@ td
 
 
 #body
-  clear: both
-  margin: 0 auto
-  padding: 10px
-  width: 800px
-
+  +box
 
 #footer
-  color: #999
-  margin: 50px auto
-  padding: 10px
-  clear: both
-  width: 800px
-
+  :color #999
+  :margin 10px auto
+  :padding 10px
   a
-    color: #444
-
+    :color #444
     &:visited
-      color: #444
-
+      :color #444
     &:hover
-      color: #777
+      :color #777
 
 
 #site_wide_announcements
@@ -79,20 +149,18 @@ td
     padding: 0
     margin: 0
 
-
-h1
-  margin: 0
-
+.title
+  :margin-top 15px
+  :margin-bottom 15px
 
 #tabhead
-  position: relative
-  background: #035 url('/site_media/pinax/images/heading.png') left top repeat-x
-  border-bottom: 1px solid #000
+  +box
+  :position relative
 
   .logo
-    height: 80px
-    padding-left: 5px
-    padding-top: 0
+    :height 80px
+    :padding-left 5px
+    :padding-top 0
 
     img
       width: 190px
@@ -100,9 +168,9 @@ h1
 
   .login
     position: absolute
-    top: 6px
-    right: 15px
-    color: #DEF
+    top: 20px
+    right: 30px
+    :color = !secondary
 
     a
       color: #DEF
@@ -199,9 +267,9 @@ table
 
 
 .friendship_request
-  padding: 5px
-  background: #DEF
-  border: 1px solid #9BC
+  :padding 5px
+  :background = !secondary
+  :border 1px solid #9BC
 
   p, form
     padding: 0
@@ -309,10 +377,10 @@ table.messages
 
 
 #subnav
-  margin: 0
-  padding: 0
-  background: #DEF
-  border-bottom: 1px solid #9BC
+  :margin 0
+  :padding 0
+  :background = !subnav_bg
+  :border-bottom 1px solid #9BC
 
   ul
     float: right
@@ -367,9 +435,9 @@ div
     width: 550px
 
   &.friends
-    background: #DEF
-    padding: 8px
-    margin-bottom: 20px
+    :background = !secondary
+    :padding 8px
+    :margin-bottom 20px
 
     h2
       margin: 0 0 5px 0
@@ -386,18 +454,18 @@ div
       margin: 0 0 12px 0
 
   &.tribes
-    background: #DEF
-    padding: 8px
-    margin-bottom: 20px
+    :background = !secondary
+    :padding 8px
+    :margin-bottom 20px
 
     h2
       margin: 0 0 5px 0
       padding: 0
 
   &.members
-    background: #DEF
-    padding: 8px
-    margin-bottom: 20px
+    :background = !secondary
+    :padding 8px
+    :margin-bottom 20px
 
     h2
       margin: 0 0 5px 0
@@ -414,9 +482,9 @@ div
       margin: 0 0 12px 0
 
   &.notice_settings
-    background: #DEF
-    padding: 8px
-    margin: 20px 0
+    :background = !secondary
+    :padding 8px
+    :margin 20px 0
 
     h2
       margin: 0 0 5px 0
@@ -825,15 +893,15 @@ legend
 
 .form-toggle
   p
-    margin-bottom: 2px
+    :margin-bottom 2px
 
     span
-      background: #DEF
-      padding: 3px 6px
-      border-top: 1px solid #9BC
-      border-left: 1px solid #9BC
-      border-right: 1px solid #9BC
-      cursor: pointer
+      :background = !secondary 
+      :padding 3px 6px
+      :border-top 1px solid #9BC
+      :border-left 1px solid #9BC
+      :border-right 1px solid #9BC
+      :cursor pointer
 
   form
     padding: 3px 6px
