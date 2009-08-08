@@ -1,0 +1,13 @@
+dev.db
+*.pyc
+*.swp
+site_media/posters
+site_media/avatars
+.svn/
+*.swo
+*.swp
+local_settings.py
+.project
+.pydevproject
+000*
+.sass-cache

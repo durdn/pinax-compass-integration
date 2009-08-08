@@ -1,0 +1,10 @@
+#left_tabs { position: absolute; bottom: -1px; left: 210px; }
+
+#right_tabs { position: absolute; right: 15px; bottom: -1px; }
+
+ul.tabs { margin: 0 0 5px; }
+ul.tabs a { color: #444; font-weight: bold; text-decoration: none; }
+ul.tabs a:visited { color: #444; font-weight: bold; text-decoration: none; }
+ul.tabs a:hover { color: #666; }
+ul.tabs li { list-style-type: none; display: inline; background-color: #DDD; padding: 5px 0 4px; margin: 0 1px; }
+ul.tabs li a { padding: 5px 12px; }
