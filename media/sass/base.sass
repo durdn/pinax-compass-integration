@@ -28,6 +28,14 @@
   :background-attachment	scroll
   :opacity	1
 
+=dots-top
+  :background-color	transparent
+  :background-image	url(/site_media/img/skinny_dots.gif)
+  :background-repeat	repeat-x
+  :background-position	50% 0%
+  :background-attachment	scroll
+  :opacity	1
+
 
 hr
   :color #fff
@@ -90,20 +98,37 @@ td
 
 
 #footer
-  :color #999
+  +dots-top
+  :color #777777
   :margin 50px auto
   :padding 10px
   :clear both
   :width 800px
+  .header
+    :color #787878
+    :font-weight bold
+
+  #col1
+    +grid(3,16)
+  #col2
+    +grid(3,16)
+  #col3
+    +grid(3,16)
+  #col4
+    +grid(3,16)
+    :color #aaaaaa
+    a
+      :color #aaaaaa
 
   a
-    :color #444
+    :color #777777
 
     &:visited
-      :color #444
+      :color #777777
 
     &:hover
-      :color #777
+      :color #787878
+      :text-decoration underline
 
 
 #site_wide_announcements

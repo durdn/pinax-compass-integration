@@ -20,10 +20,16 @@ td { margin: 0; border: 0; padding: 0; }
 
 #body { clear: both; margin: 0 auto; padding: 10px; width: 800px; }
 
-#footer { color: #999; margin: 50px auto; padding: 10px; clear: both; width: 800px; }
-#footer a { color: #444; }
-#footer a:visited { color: #444; }
-#footer a:hover { color: #777; }
+#footer { background-color: transparent; background-image: url(/site_media/img/skinny_dots.gif); background-repeat: repeat-x; background-position: 50% 0%; background-attachment: scroll; opacity: 1; color: #777777; margin: 50px auto; padding: 10px; clear: both; width: 800px; }
+#footer .header { color: #787878; font-weight: bold; }
+#footer #col1 { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
+#footer #col2 { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
+#footer #col3 { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
+#footer #col4 { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; color: #aaaaaa; }
+#footer #col4 a { color: #aaaaaa; }
+#footer a { color: #777777; }
+#footer a:visited { color: #777777; }
+#footer a:hover { color: #787878; text-decoration: underline; }
 
 #site_wide_announcements { background: yellow; padding: 10px; text-align: center; }
 #site_wide_announcements ul { padding: 0; margin: 0; }
