@@ -3,31 +3,42 @@
 
 //+global-reset
 
-!background_content_color = #fff
-!background_color = #111111
-!background_frame_color = #eeeeee
-!title_main_color = #ff8b1f
-!title_main_color_1 = #fff
-!footer_color = #aaa
-!signature = #ff8b1f
-!subnav_bg = #aaa
-!secondary = #aaa
+!menu =	#1F75CC
+
+=fnt
+  :font-family	"lucida grande","segoe ui",arial,sans-serif
+  :font-size	11px
+  :font-weight	normal
+  :font-style	normal
+  :color = !menu
+  :text-transform	none
+  :text-decoration	none
+  :letter-spacing	normal
+  :word-spacing	normal
+  :line-height	20px
+  :vertical-align	baseline
+  :direction	ltr
+
+=dots
+  :background-color	transparent
+  :background-image	url(https://www.getdropbox.com/static/images/skinny_dots.gif)
+  :background-repeat	repeat-x
+  :background-position	50% 100%
+  :background-attachment	scroll
+  :opacity	1
 
 body
   +grid-container
   :background-color #FFF
   :margin 0
 
-
 html
   :height 100%
 
 
 body
-  :height 100%
+  +fnt
   :color #333
-  :font-family "Helvetica Neue", Arial, sans-serif
-  :font-size 10pt
 
 
 a
@@ -131,8 +142,7 @@ textarea
 
 
 #tabhead
-  :background #035 url('/site_media/pinax/images/heading.png') left top repeat-x
-  :border-bottom 1px solid #000
+  +dots
   :position relative
 
   .logo
@@ -141,20 +151,33 @@ textarea
     :padding-top 0
 
     img
-      :width 190px
-      :height 79px
+      :width 236px
+      :height 62px
 
   .login
     :position absolute
     :top 6px
     :right 15px
     :color #DEF
+    :font-family	"lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif
+    :font-size	11px
+    :font-weight	401
+    :font-style	normal
+    :color	#222222
+    :text-transform	none
+    :text-decoration	none
+    :letter-spacing	normal
+    :word-spacing	normal
+    :line-height	14px
+    :text-align	start
+    :vertical-align	baseline
+    :direction	ltr
 
     a
-      :color #DEF
+      :color	#222222
 
       &:visited
-        :color #DEF
+        :color	#222222
 
       &:hover
         :color #FFF
@@ -252,11 +275,12 @@ div.profile_info p
   :margin 0
 
 
+
 #subnav
   :margin 0
   :padding 0
-  :background #DEF
-  :border-bottom 1px solid #9BC
+  :background #fff
+  +dots
 
   ul
     :float right

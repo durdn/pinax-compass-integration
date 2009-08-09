@@ -2,7 +2,7 @@ body { margin-left: auto; margin-right: auto; width: 960px; background-color: #F
 
 html { height: 100%; }
 
-body { height: 100%; color: #333; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10pt; }
+body { font-family: "lucida grande","segoe ui",arial,sans-serif; font-size: 11px; font-weight: normal; font-style: normal; color: #1f75cc; text-transform: none; text-decoration: none; letter-spacing: normal; word-spacing: normal; line-height: 20px; vertical-align: baseline; direction: ltr; color: #333; }
 
 a { color: #13C; }
 a:visited { color: #13C; }
@@ -36,12 +36,12 @@ textarea { padding: 3px; margin: 3px; border: solid 1px #C6C6C6; border-bottom: 
 
 .clearboth { clear: both; }
 
-#tabhead { background: #035 url('/site_media/pinax/images/heading.png') left top repeat-x; border-bottom: 1px solid #000; position: relative; }
+#tabhead { background-color: transparent; background-image: url(https://www.getdropbox.com/static/images/skinny_dots.gif); background-repeat: repeat-x; background-position: 50% 100%; background-attachment: scroll; opacity: 1; position: relative; }
 #tabhead .logo { height: 80px; padding-left: 5px; padding-top: 0; }
-#tabhead .logo img { width: 190px; height: 79px; }
-#tabhead .login { position: absolute; top: 6px; right: 15px; color: #DEF; }
-#tabhead .login a { color: #DEF; }
-#tabhead .login a:visited { color: #DEF; }
+#tabhead .logo img { width: 236px; height: 62px; }
+#tabhead .login { position: absolute; top: 6px; right: 15px; color: #DEF; font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif; font-size: 11px; font-weight: 401; font-style: normal; color: #222222; text-transform: none; text-decoration: none; letter-spacing: normal; word-spacing: normal; line-height: 14px; text-align: start; vertical-align: baseline; direction: ltr; }
+#tabhead .login a { color: #222222; }
+#tabhead .login a:visited { color: #222222; }
 #tabhead .login a:hover { color: #FFF; }
 
 ul.errorlist { margin: 0; padding: 0; list-style: none; color: red; }
@@ -75,7 +75,7 @@ span.notice_type_description { color: #666; font-size: 80%; font-style: italic; 
 
 div.profile_info p { margin: 0; }
 
-#subnav { margin: 0; padding: 0; background: #DEF; border-bottom: 1px solid #9BC; }
+#subnav { margin: 0; padding: 0; background: #fff; background-color: transparent; background-image: url(https://www.getdropbox.com/static/images/skinny_dots.gif); background-repeat: repeat-x; background-position: 50% 100%; background-attachment: scroll; opacity: 1; }
 #subnav ul { float: right; margin: 0 20px; padding: 0; }
 #subnav ul li { display: inline; list-style-type: none; }
 #subnav ul a:link, #subnav ul a:visited { float: left; font-weight: bold; text-decoration: none; color: #444; padding: 4px 20px; }

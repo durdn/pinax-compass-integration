@@ -2,9 +2,9 @@
 
 #right_tabs { position: absolute; right: 15px; bottom: -1px; }
 
-ul.tabs { margin: 0 0 5px; }
-ul.tabs a { color: #444; font-weight: bold; text-decoration: none; }
-ul.tabs a:visited { color: #444; font-weight: bold; text-decoration: none; }
+ul.tabs { margin: 0 0 5px; font-family: "lucida grande","segoe ui",arial,sans-serif; font-size: 16px; font-weight: bold; font-style: normal; color: #1f75cc; text-transform: none; text-decoration: none; letter-spacing: normal; word-spacing: normal; line-height: 20px; vertical-align: baseline; direction: ltr; }
+ul.tabs a { color: #1f75cc; font-weight: bold; text-decoration: none; }
+ul.tabs a:visited { color: #1f75cc; font-weight: bold; text-decoration: none; }
 ul.tabs a:hover { color: #666; }
-ul.tabs li { list-style-type: none; display: inline; background-color: #DDD; padding: 5px 0 4px; margin: 0 1px; }
+ul.tabs li { list-style-type: none; display: inline; background-color: #fff; padding: 5px 0 4px; margin: 0 1px; }
 ul.tabs li a { padding: 5px 12px; }

@@ -1,3 +1,5 @@
+!menu =	#1F75CC
+
 #left_tabs
   :position absolute
   :bottom -1px
@@ -12,14 +14,26 @@
 
 ul.tabs
   :margin 0 0 5px
+  :font-family	"lucida grande","segoe ui",arial,sans-serif
+  :font-size	16px
+  :font-weight	bold
+  :font-style	normal
+  :color = !menu
+  :text-transform	none
+  :text-decoration	none
+  :letter-spacing	normal
+  :word-spacing	normal
+  :line-height	20px
+  :vertical-align	baseline
+  :direction	ltr
 
   a
-    :color #444
+    :color = !menu
     :font-weight bold
     :text-decoration none
 
     &:visited
-      :color #444
+      :color = !menu
       :font-weight bold
       :text-decoration none
 
@@ -29,7 +43,7 @@ ul.tabs
   li
     :list-style-type none
     :display inline
-    :background-color #DDD
+    :background-color #fff
     :padding 5px 0 4px
     :margin 0 1px
 
