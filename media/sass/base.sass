@@ -21,7 +21,7 @@
 
 =dots
   :background-color	transparent
-  :background-image	url(https://www.getdropbox.com/static/images/skinny_dots.gif)
+  :background-image	url(/site_media/img/skinny_dots.gif)
   :background-repeat	repeat-x
   :background-position	50% 100%
   :background-attachment	scroll
@@ -140,24 +140,28 @@ textarea
 .clearboth
   :clear both
 
+#container
+  +grid-prefix(2,16)
+  +grid-suffix(1,16)
 
 #tabhead
   +dots
   :position relative
 
   .logo
-    :height 80px
+    :height 116px
     :padding-left 5px
     :padding-top 0
 
     img
       :width 236px
       :height 62px
+      :margin-top 20px
 
   .login
     :position absolute
-    :top 6px
-    :right 15px
+    :top 10px
+    :right 10px
     :color #DEF
     :font-family	"lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif
     :font-size	11px
@@ -280,7 +284,6 @@ div.profile_info p
   :margin 0
   :padding 0
   :background #fff
-  +dots
 
   ul
     :float right

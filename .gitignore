@@ -11,3 +11,4 @@ local_settings.py
 .pydevproject
 000*
 .sass-cache
+.DS_Store
