@@ -1,3 +1,5 @@
+hr { color: #fff; border: 0; background-color: transparent; background-image: url(/site_media/img/skinny_dots.gif); background-repeat: repeat-x; background-position: 50% 100%; background-attachment: scroll; opacity: 1; }
+
 body { margin-left: auto; margin-right: auto; width: 960px; background-color: #FFF; margin: 0; }
 
 html { height: 100%; }
