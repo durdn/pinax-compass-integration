@@ -3,19 +3,20 @@
 
 //+global-reset
 
-!menu =	#1F75CC
+!main_color =	#1F75CC
 
 =fnt
   :font-family	"lucida grande","segoe ui",arial,sans-serif
   :font-size	11px
   :font-weight	normal
   :font-style	normal
-  :color = !menu
+  :color = !main_color
   :text-transform	none
   :text-decoration	none
   :letter-spacing	normal
   :word-spacing	normal
-  :line-height	20px
+//  :line-height	20px
+  :line-height	16.5px
   :vertical-align	baseline
   :direction	ltr
 
@@ -48,10 +49,16 @@ body
 
 
 a
-  :color #13C
+  :color = !main_color
+  :text-decoration none
 
   &:visited
-    :color #13C
+    :color = !main_color
+    :text-decoration none
+
+  &:hover
+    :color = !main_color
+    :text-decoration underline
 
 
 img
@@ -111,6 +118,7 @@ td
 
 h1
   :margin 0
+  :font-size 21px
 
 
 form
@@ -182,15 +190,21 @@ textarea
     :text-align	start
     :vertical-align	baseline
     :direction	ltr
+    #rest
+      :display inline
+      :color = !main_color
 
     a
-      :color	#222222
+      :color = !main_color
+      :text-decoration	none
 
       &:visited
-        :color	#222222
+        :color = !main_color
+        :text-decoration	none
 
       &:hover
-        :color #FFF
+        :color = !main_color
+        :text-decoration underline
 
 
 ul

@@ -1,4 +1,4 @@
-!menu =	#1F75CC
+!main_color =	#1F75CC
 
 #left_tabs
   :position relative
@@ -16,7 +16,7 @@ ul.tabs
   :font-size	16px
   :font-weight	bold
   :font-style	normal
-  :color = !menu
+  :color = !main_color
   :text-transform	none
   :text-decoration	none
   :letter-spacing	normal
@@ -26,17 +26,18 @@ ul.tabs
   :direction	ltr
 
   a
-    :color = !menu
+    :color = !main_color
     :font-weight bold
     :text-decoration none
 
     &:visited
-      :color = !menu
+      :color = !main_color
       :font-weight bold
       :text-decoration none
 
     &:hover
-      :color #666
+      :color = !main_color
+      :text-decoration underline
 
   li
     :list-style-type none
