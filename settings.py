@@ -81,7 +81,7 @@ MIDDLEWARE_CLASSES = (
     'pinax.middleware.security.HideSensistiveFieldsMiddleware',
 )
 
-ROOT_URLCONF = 'dropbox-theme.urls'
+ROOT_URLCONF = 'project.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, "templates"),
@@ -95,8 +95,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
     
-    "pinax.core.context_processors.contact_email",
-    "pinax.core.context_processors.site_name",
+    #"pinax.core.context_processors.contact_email",
+    #"pinax.core.context_processors.site_name",
+    "pinax.core.context_processors.pinax_settings",
     
     "notification.context_processors.notification",
     "announcements.context_processors.site_wide_announcements",
@@ -167,3 +168,13 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'site_media', 'static')
+STATIC_URL = '/site_media/static/'
+
+# Additional directories which hold static files
+STATICFILES_DIRS = (
+    ('basic_project', os.path.join(PROJECT_ROOT, 'media')),
+    ('pinax', os.path.join(PINAX_ROOT, 'media', PINAX_THEME)),
+)
+
