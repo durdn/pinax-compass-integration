@@ -18,13 +18,44 @@ table { border-collapse: collapse; border-spacing: 0; border: 0; font-size: inhe
 
 td { margin: 0; border: 0; padding: 0; }
 
-#body { clear: both; margin: 0 auto; padding: 10px; width: 800px; }
+#body { clear: both; margin: 0 auto; padding: 10px; }
+#body #profile #info { margin-left: 0; display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 100px; margin-bottom: 10px; }
+#body #profile #info h1 { color: #000; }
+#body #profile #list { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 400px; margin-bottom: 10px; }
+#body #profile #list .movie { border: 1px solid #dddddd; margin-top: 8px; margin-bottom: 8px; padding: 8px; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+#body #profile #list .movie:hover { background: #eeeeee; }
+#body #profile #list .movie .thumb { position: inherit; display: inline; height: 140px; }
+#body #profile #list .movie .text { position: absolute; display: inline; margin-left: 10px; }
+#body #profile #list .movie .stars { display: inline; position: inherit; margin-right: 5px; margin-left: 10px; }
+#body #profile #list .movie .stars .fav-link { display: inline; }
+#body #profile #list .movie .stars h4 { display: inline; }
+#body #profile #unused { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; margin-right: 0; margin-bottom: 10px; }
 
-#footer { background-color: transparent; background-image: url(/site_media/img/skinny_dots.gif); background-repeat: repeat-x; background-position: 50% 0%; background-attachment: scroll; opacity: 1; color: #777777; margin: 50px auto; padding: 10px; clear: both; width: 800px; }
-#footer .header { color: #787878; font-weight: bold; }
-#footer #col1 { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
-#footer #col2 { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
-#footer #col3 { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
+#last-seen { margin-bottom: 10px; }
+#last-seen .movie { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 340px; border: 1px solid #dddddd; margin-top: 8px; margin-bottom: 8px; padding: 8px; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+#last-seen .movie:hover { background: #eeeeee; }
+#last-seen .movie .thumb { position: inherit; display: inline; height: 140px; }
+#last-seen .movie .text { position: absolute; display: inline; margin-left: 10px; }
+#last-seen .movie .stars { display: inline; position: inherit; margin-right: 5px; margin-left: 10px; }
+#last-seen .movie .stars .fav-link { display: inline; }
+#last-seen .movie .stars h4 { display: inline; }
+
+#popular #genre { margin-left: 0; display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 100px; margin-bottom: 10px; }
+#popular #list { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 460px; margin-bottom: 10px; }
+#popular #list .movie { border: 1px solid #dddddd; margin-top: 8px; margin-bottom: 8px; padding: 8px; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+#popular #list .movie:hover { background: #eeeeee; }
+#popular #list .movie .thumb { position: inherit; display: inline; height: 140px; }
+#popular #list .movie .text { position: absolute; display: inline; margin-left: 10px; }
+#popular #list .movie .stars { display: inline; position: inherit; margin-right: 5px; margin-left: 10px; }
+#popular #list .movie .stars .fav-link { display: inline; }
+#popular #list .movie .stars h4 { display: inline; }
+#popular #cut { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 100px; margin-right: 0; margin-bottom: 10px; }
+
+#footer { background-color: transparent; background-image: url(/site_media/img/skinny_dots.gif); background-repeat: repeat-x; background-position: 50% 0%; background-attachment: scroll; opacity: 1; color: #777777; margin: 50px auto; padding: 10px; clear: both; }
+#footer .header { margin-left: -5px; color: #787878; font-weight: bold; }
+#footer #col1 { margin-top: 2px; margin-bottom: 2px; display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
+#footer #col2 { margin-top: 2px; margin-bottom: 2px; display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
+#footer #col3 { margin-top: 2px; margin-bottom: 2px; display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
 #footer #col4 { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; color: #aaaaaa; }
 #footer #col4 a { color: #aaaaaa; }
 #footer a { color: #777777; }
@@ -47,19 +78,43 @@ textarea { padding: 3px; margin: 3px; border: solid 1px #C6C6C6; border-bottom: 
 
 #container { padding-left: 120px; padding-right: 60px; }
 
+#welcome { -moz-border-radius: 10px; -webkit-border-radius: 10px; background: #f4faff; padding: 5px 10px 5px 10px; border: 1px solid #aeceef; }
+#welcome #close-button { position: relative; float: right; }
+
+#movielist { font-size: 12px; font-weight: bold; }
+#movielist #list-view-type { font-weight: normal; font-size: 11px; display: inline; }
+#movielist #filters { font-weight: normal; font-size: 11px; display: inline; }
+
+#movielist-thumb td, th, tr { margin: 0px 2px 0px 2px; padding: 2px; }
+
+#movielist td, th, tr { margin: 0px 3px 0px 3px; padding: 2px; }
+
+.movie-fragment { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 760px; }
+.movie-fragment .thumbnail { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 160px; }
+.movie-fragment .data { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 460px; padding-bottom: 10px; }
+
+.extended-list .saved_date { display: inline; float: left; margin-left: 10px; margin-right: 10px; width: 640px; margin-right: 0; }
+
+#search #hide-search-box { position: relative; float: right; }
+
 #tabhead { background-color: transparent; background-image: url(/site_media/img/skinny_dots.gif); background-repeat: repeat-x; background-position: 50% 100%; background-attachment: scroll; opacity: 1; position: relative; }
 #tabhead .logo { height: 116px; padding-left: 5px; padding-top: 0; }
-#tabhead .logo img { width: 236px; height: 62px; margin-top: 20px; }
-#tabhead .login { position: absolute; top: 10px; right: 10px; color: #DEF; font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif; font-size: 11px; font-weight: 401; font-style: normal; color: #222222; text-transform: none; text-decoration: none; letter-spacing: normal; word-spacing: normal; line-height: 14px; text-align: start; vertical-align: baseline; direction: ltr; }
+#tabhead .logo img { width: 315px; height: 62px; margin-top: 20px; }
+#tabhead .login { position: absolute; top: 10px; width: 160px; right: 5px; color: #DEF; font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif; font-size: 11px; font-weight: 401; font-style: normal; color: #222222; text-transform: none; text-decoration: none; letter-spacing: normal; word-spacing: normal; line-height: 14px; text-align: start; vertical-align: baseline; direction: ltr; -moz-border-radius: 10px; -webkit-border-radius: 10px; border: 1px solid #CCC; padding: 5px 8px 5px 8px; }
 #tabhead .login #rest { display: inline; color: #1f75cc; }
 #tabhead .login a { color: #1f75cc; text-decoration: none; }
 #tabhead .login a:visited { color: #1f75cc; text-decoration: none; }
 #tabhead .login a:hover { color: #1f75cc; text-decoration: underline; }
+#tabhead .login a b { color: #000; }
+#tabhead .login #avatar-icon { height: 40px; display: inline; margin-top: 8px; }
+#tabhead .login #reputation-block { position: inherit; top: 15px; margin-left: 3px; margin-top: 5px; display: inline; }
+#tabhead .login #reputation-block #reputation { display: inline; }
+#tabhead .login #reputation-block #reputation #level-bar { display: inline; width: 50px; padding: 3px; background-color: transparent; background-image: url(/site_media/img/bar.gif); }
 
 ul.errorlist { margin: 0; padding: 0; list-style: none; color: red; }
 ul#messages { margin: 0 0 10px 0; padding: 0; list-style: none; }
-ul#messages li { padding: 5px 10px; background: #EFD; margin: 3px; border: 1px solid #BC9; }
-ul#messages li a { float: right; color: #693; }
+ul#messages li { padding: 5px 10px; background: #f4faff; margin: 3px; border: 1px solid #aeceef; }
+ul#messages li a { float: right; color: #1f75cc; }
 
 .verified { color: green; }
 
@@ -87,14 +142,14 @@ span.notice_type_description { color: #666; font-size: 80%; font-style: italic; 
 
 div.profile_info p { margin: 0; }
 
-#subnav { margin: 0; padding: 0; background: #fff; }
-#subnav ul { float: right; margin: 0 20px; padding: 0; }
+#subnav { margin: 0; padding: 0; padding-bottom: 10px; background: #fff; }
+#subnav ul { margin: 0; padding: 0; }
 #subnav ul li { display: inline; list-style-type: none; }
 #subnav ul a:link, #subnav ul a:visited { float: left; font-weight: bold; text-decoration: none; color: #444; padding: 4px 20px; }
-#subnav ul a:hover { color: #FFF; background: #9BC; }
+#subnav ul a:hover { color: #FFF; background: #1f75cc; text-decoration: underline; }
 
 div.right_panel { margin-top: 20px; width: 200px; float: right; z-index: 999; }
-div.notice_settings { background: #DEF; padding: 8px; margin: 20px 0; }
+div.notice_settings { background: #f4faff; padding: 8px; margin: 20px 0; border: 1px solid #aeceef; }
 div.notice_settings h2 { margin: 0 0 5px 0; padding: 0; }
 
 #locale_switcher { display: inline; }
@@ -149,5 +204,12 @@ legend { padding: 0 .4em; font-weight: bold; font-size: 1.2em; }
 .signupform { float: left; }
 
 .form-toggle p { margin-bottom: 2px; }
-.form-toggle p span { background: #f4faff; padding: 3px 6px; border-top: 1px solid #aeceef; border-left: 1px solid #aeceef; border-right: 1px solid #aeceef; cursor: pointer; }
+.form-toggle p span { background: #f4faff; padding: 3px 6px; border: 1px solid #aeceef; cursor: pointer; }
 .form-toggle form { padding: 3px 6px; margin: 0; background: #f4faff; border: 1px solid #aeceef; }
+
+#list ul { border: 1px solid #ff0000; padding: 0px; }
+#list ul li { padding-top: 10px; padding-bottom: 10px; list-style-type: none; }
+#list ul li .meta { display: inline; }
+#list ul li .meta .avatar { display: inline; }
+#list ul li .meta .details { position: inherit; top: 0px; display: inline; }
+#list ul li .meta .body { display: inline; }

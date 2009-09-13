@@ -5,6 +5,7 @@
 
 !main_color =	#1F75CC
 !secondary_color =	#F4FAFF
+!border_notices = 1px "solid" #aeceef
 
 =fnt
   :font-family	"lucida grande","segoe ui",arial,sans-serif
@@ -36,6 +37,10 @@
   :background-position	50% 0%
   :background-attachment	scroll
   :opacity	1
+
+=curved
+  :-moz-border-radius 10px
+  :-webkit-border-radius 10px
 
 
 hr
@@ -95,8 +100,113 @@ td
   :clear both
   :margin 0 auto
   :padding 10px
-  :width 800px
 
+  #profile
+    #info
+      +alpha
+      +grid(2,16)
+      :margin-bottom 10px
+      h1
+        :color #000
+    #list
+      +grid(7,16)
+      :margin-bottom 10px
+      .movie
+        &:hover
+          :background #eeeeee
+        :border 1px solid #dddddd
+        :margin-top 8px
+        :margin-bottom 8px
+        :padding 8px
+        +curved
+        .thumb
+          :position inherit
+          :display inline
+          :height 140px
+        .text
+          :position absolute
+          :display inline
+          :margin-left 10px
+        .stars
+          :display inline
+          :position inherit
+          :margin-right 5px
+          :margin-left 10px
+          .fav-link
+            :display inline
+          h4
+            :display inline
+    #unused
+      +grid(3,16)
+      +omega
+      :margin-bottom 10px
+
+#last-seen
+  :margin-bottom 10px
+  .movie
+    +grid(6,16)
+    &:hover
+      :background #eeeeee
+    :border 1px solid #dddddd
+    :margin-top 8px
+    :margin-bottom 8px
+    :padding 8px
+    +curved
+    .thumb
+      :position inherit
+      :display inline
+      :height 140px
+    .text
+      :position absolute
+      :display inline
+      :margin-left 10px
+    .stars
+      :display inline
+      :position inherit
+      :margin-right 5px
+      :margin-left 10px
+      .fav-link
+        :display inline
+      h4
+        :display inline
+        
+#popular
+  #genre
+    +alpha
+    +grid(2,16)
+    :margin-bottom 10px
+  #list
+    +grid(8,16)
+    :margin-bottom 10px
+    .movie
+      &:hover
+        :background #eeeeee
+      :border 1px solid #dddddd
+      :margin-top 8px
+      :margin-bottom 8px
+      :padding 8px
+      +curved
+      .thumb
+        :position inherit
+        :display inline
+        :height 140px
+      .text
+        :position absolute
+        :display inline
+        :margin-left 10px
+      .stars
+        :display inline
+        :position inherit
+        :margin-right 5px
+        :margin-left 10px
+        .fav-link
+          :display inline
+        h4
+          :display inline
+  #cut
+    +grid(2,16)
+    +omega
+    :margin-bottom 10px
 
 #footer
   +dots-top
@@ -104,16 +214,22 @@ td
   :margin 50px auto
   :padding 10px
   :clear both
-  :width 800px
   .header
+    :margin-left -5px
     :color #787878
     :font-weight bold
 
   #col1
+    :margin-top 2px
+    :margin-bottom 2px
     +grid(3,16)
   #col2
+    :margin-top 2px
+    :margin-bottom 2px
     +grid(3,16)
   #col3
+    :margin-top 2px
+    :margin-bottom 2px
     +grid(3,16)
   #col4
     +grid(3,16)
@@ -184,6 +300,53 @@ textarea
   +grid-prefix(2,16)
   +grid-suffix(1,16)
 
+#welcome
+  +curved
+  :background = !secondary_color
+  :padding 5px 10px 5px 10px
+  :border = !border_notices
+  #close-button
+    :position relative
+    :float right
+
+#movielist
+  :font-size 12px
+  :font-weight bold
+  #list-view-type
+    :font-weight normal
+    :font-size 11px
+    :display inline
+  #filters
+    :font-weight normal
+    :font-size 11px
+    :display inline
+
+#movielist-thumb td, th, tr
+  margin: 0px 2px 0px 2px
+  padding: 2px
+
+#movielist td, th, tr
+  margin: 0px 3px 0px 3px
+  padding: 2px
+
+.movie-fragment
+  +grid(13,16)
+  .thumbnail
+    +grid(3,16)
+  .data
+    +grid(8,16)
+    :padding-bottom 10px
+
+.extended-list
+  .saved_date
+    +grid(11,16)
+    +omega
+
+#search
+  #hide-search-box
+    :position relative
+    :float right
+
 #tabhead
   +dots
   :position relative
@@ -194,14 +357,15 @@ textarea
     :padding-top 0
 
     img
-      :width 236px
+      :width 315px
       :height 62px
       :margin-top 20px
 
   .login
     :position absolute
     :top 10px
-    :right 10px
+    :width 160px
+    :right 5px
     :color #DEF
     :font-family	"lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif
     :font-size	11px
@@ -216,6 +380,9 @@ textarea
     :text-align	start
     :vertical-align	baseline
     :direction	ltr
+    +curved
+    :border 1px solid #CCC
+    :padding 5px 8px 5px 8px
     #rest
       :display inline
       :color = !main_color
@@ -231,7 +398,27 @@ textarea
       &:hover
         :color = !main_color
         :text-decoration underline
-
+      b
+        :color #000
+        
+    #avatar-icon
+      :height 40px
+      :display inline
+      :margin-top 8px
+    #reputation-block
+      :position inherit
+      :top 15px
+      :margin-left 3px
+      :margin-top 5px
+      :display inline
+      #reputation
+        :display inline
+        #level-bar
+          :display inline
+          :width 50px
+          :padding 3px
+          :background-color transparent
+          :background-image url(/site_media/img/bar.gif)
 
 ul
   &.errorlist
@@ -247,13 +434,13 @@ ul
 
     li
       :padding 5px 10px
-      :background #EFD
+      :background = !secondary_color
       :margin 3px
-      :border 1px solid #BC9
+      :border = !border_notices
 
       a
         :float right
-        :color #693
+        :color = !main_color
 
 
 .verified
@@ -329,11 +516,12 @@ div.profile_info p
 #subnav
   :margin 0
   :padding 0
+  :padding-bottom 10px
   :background #fff
 
   ul
-    :float right
-    :margin 0 20px
+    //:float right
+    :margin 0
     :padding 0
 
     li
@@ -350,7 +538,8 @@ div.profile_info p
 
       &:hover
         :color #FFF
-        :background #9BC
+        :background = !main_color
+        :text-decoration underline
 
 
 div
@@ -361,9 +550,10 @@ div
     :z-index 999
 
   &.notice_settings
-    :background #DEF
+    :background = !secondary_color
     :padding 8px
     :margin 20px 0
+    :border 1px solid #aeceef
 
     h2
       :margin 0 0 5px 0
@@ -543,9 +733,7 @@ legend
     span
       :background = !secondary_color
       :padding 3px 6px
-      :border-top 1px solid #aeceef
-      :border-left 1px solid #aeceef
-      :border-right 1px solid #aeceef
+      :border 1px solid #aeceef
       :cursor pointer
 
   form
@@ -553,3 +741,23 @@ legend
     :margin 0
     :background = !secondary_color
     :border 1px solid #aeceef
+
+#list
+  ul
+    .responses
+    :border 1px solid #ff0000
+    :padding 0px
+    li
+      :padding-top 10px
+      :padding-bottom 10px
+      :list-style-type none
+      .meta
+        :display inline
+        .avatar
+          :display inline
+        .details
+          :position inherit
+          :top 0px
+          :display inline
+        .body
+          :display inline

@@ -1,0 +1,187 @@
+.uniForm
+  :margin 0
+  :padding 0
+  :position relative
+  :z-index 1
+
+  fieldset
+    :border none
+    :margin 0
+    :padding 0
+    :position relative
+
+    legend
+      :margin 0
+      :padding 0
+
+  .ctrlHolder, .buttonHolder
+    :margin 0
+    :padding 0
+    :clear both
+
+  &:after, .buttonHolder:after
+    :content "."
+    :display block
+    :height 0
+    :line-height 0
+    :font-size 0
+    :clear both
+    :min-height 0
+    :visibility hidden
+
+  .ctrlHolder
+    &:after, .multiField:after
+      :content "."
+      :display block
+      :height 0
+      :line-height 0
+      :font-size 0
+      :clear both
+      :min-height 0
+      :visibility hidden
+
+  .inlineLabel
+    :width auto
+    :float none
+    :margin 0
+    :display block
+
+    &:after
+      :content "."
+      :display block
+      :height 0
+      :line-height 0
+      :font-size 0
+      :clear both
+      :min-height 0
+      :visibility hidden
+
+  .inlineLabels .inlineLabel, .blockLabels .inlineLabel
+    :width auto
+    :float none
+    :margin 0
+    :display block
+
+  .inlineLabel input, .inlineLabels .inlineLabel input, .blockLabels .inlineLabel input
+    :border none
+    :padding 0
+    :margin 0
+
+  label, .label
+    :display block
+    :float none
+    :padding 0
+    :line-height 100%
+    :width auto
+
+  .blockLabels
+    label, .label
+      :display block
+      :float none
+      :padding 0
+      :line-height 100%
+      :width auto
+
+  .textInput
+    :float left
+
+  .blockLabels
+    .textInput, .fileUpload
+      :float left
+
+  .selectInput
+    :float left
+
+  .blockLabels
+    .selectInput, select
+      :float left
+
+  textarea, .blockLabels textarea
+    :float left
+
+  .formHint, .blockLabels .formHint
+    :float right
+    :margin 0
+    :clear none
+
+  .multiField, .blockLabels .multiField
+    :width auto
+    :float left
+
+  .multiField .inlineLabel, .blockLabels .multiField .inlineLabel
+    :display block
+    :margin 0 0 .5em 0
+
+  .multiField .blockLabel, .blockLabels .multiField .blockLabel
+    :float left
+    :width auto
+    :margin 0
+
+  .multiField .blockLabel
+    .textInput, .selectInput, select
+      :width 100%
+      :margin 0
+
+  .blockLabels .multiField .blockLabel
+    .textInput, .selectInput, select
+      :width 100%
+      :margin 0
+
+  .inlineLabels
+    label, .label
+      :float left
+      :margin 0
+      :padding 0
+      :line-height 100%
+      :position relative
+
+    .textInput, .fileUpload, .selectInput, select, textarea
+      :float left
+
+    .formHint
+      :clear both
+      :float none
+
+    .multiField
+      :float left
+
+      .inlineLabel
+      .blockLabel
+        .textInput, .selectInput, select
+          :display block
+          :width 100%
+          :float none
+
+      select
+        :float left
+
+  label em, .label em
+    :position absolute
+    :left -7px
+
+  .blockLabels
+    label em, .label em
+      :position absolute
+      :left -7px
+
+  .inlineLabels
+    label em, .label em
+      :display block
+      :position absolute
+      :left auto
+      :right 0
+      :font-style normal
+      :font-weight bold
+
+  .inlineLabel em
+    :position absolute
+    :left 7px
+
+  #errorMsg, .error
+  #errorMsg
+    dt, h3, dd, ol li
+  .errorField, #OKMsg
+  .col
+    :float left
+
+    &.first, &.last

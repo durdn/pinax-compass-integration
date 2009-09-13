@@ -1,53 +1,58 @@
 {% extends "base.html" %}
 
 {% load i18n %}
-{% load openid_tags %}
-{% load ifsetting_tag %}
-
-{% block extra_head_base %}
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/site_tabs.css" />
-    {% block extra_head %}{% endblock %}
-{% endblock %}
-
+{% comment %} load openid_tags {% endcomment %}
 {% block login %}
+    <div id="login-line">
     {% if user.is_authenticated %}
-    {% openid_icon openid user %}<b>{{ user }}</b><div id="rest"> | <a href="{% url acct_email %}">{% trans "Account" %}</a> | {% if user.is_staff %}<a href="/admin/">{% trans "Admin" %}</a> | {% endif %}<a href="/openid/logout/?next={% url acct_logout %}">{% trans "Logout" %}</a></div>
+    {% comment %}{% openid_icon openid user <b>{{ user }}</b> | <a href="{% url acct_email %}">{% trans "account" %}</a> | {% if user.is_staff %}<a href="/admin/">{% trans "admin" %}</a> | {% endif %}<a href="{% url openid_logout %}?next={% url acct_logout %}">{% trans "logout" %}</a>{% endcomment %}
+    <a href="{% url profile_detail user.username%}"><b>{{ user }}</b></a> | <a href="{% url acct_email %}">{% trans "account" %}</a> | {% if user.is_staff %}<a href="/admin/">{% trans "admin" %}</a> | {% endif %}<a href="{% url acct_logout %}?next={% url acct_logout %}">{% trans "logout" %}</a>
     {% else %}
-        <a href="{% url acct_login %}">{% trans "Login" %}</a> {% ifsetting ACCOUNT_OPEN_SIGNUP %}{% trans "or" %} <a href="{% url acct_signup %}"><b>{% trans "Sign up" %}</b></a>{% endifsetting %}
+        <a href="{% url acct_login %}">{% trans "login" %}</a> {% trans "or" %} <a href="{% url acct_signup %}"><b>{% trans "sign up" %}</b></a>
     {% endif %}
+    </div>
+    <div id="avatar-icon">
+    </div>
+    <div id="reputation-block">
+    </div>
 {% endblock %}
 
-{% block logo_link_image %}<a href="{% url home %}"><img src="{{ MEDIA_URL }}/img/pinax-test.png" alt="Dropbox theme"/></a>{% endblock %}
+{% block logo_link_image %}<a href="{% url home %}"><img src="/site_media/img/pinax-test.png" alt="pinax-test"/></a>{% endblock %}
+{% block tagline %}<a href="{% url home %}"><h3>Your movie diary.</h3></a>{% endblock %}
 
 {% block right_tabs %}
     {% if user.is_authenticated %}
-        <ul class="tabs">{% spaceless %}
-            <li id="tab_profile"><a href="{% url profile_detail user %}">{% trans "Profile" %}</a></li>
-            <li id="tab_notices"><a href="{% url notification_notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
-        {% endspaceless %}</ul>
+      <ul class="mainmenu">
+          <li><a href="{% url profile_detail user %}">{% trans "Profile" %}</a></li>
+          <li><a href="{% url notification.views.notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
+          <li><a href="http://tuttivisti.uservoice.com">{% trans "Feedback" %}</a></li>
+      </ul>
+    {% else %}
+      <ul class="mainmenu">
+          <li><a href="{% url profile_detail user %}">{% trans "Profile" %}</a></li>
+          <li><a href="{% url notification.views.notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
+          <li><a href="http://tuttivisti.uservoice.com">{% trans "Feedback" %}</a></li>
+      </ul>
     {% endif %}
 {% endblock %}
 
 {% block footer %}
 <div id="col1">
-    <a href="{% url about %}" class="header">{% trans "About" %}</a><br />
-    <a href="{% url terms %}">{% trans "Terms of Service" %}</a><br />
-    <a href="{% url privacy %}">{% trans "Privacy Policy" %}</a><br />
-    <a href="{% url dmca %}">{% trans "DMCA Notice" %}</a><br />
+    <a class="header" href="{% url home %}">{% trans "Meta" %}</a><br />
+    <a href="{% url about %}">{% trans "About" %}</a><br />
+    <a href="http://durdn.com/blog">{% trans "Blog" %}</a><br />
 </div>
 <div id="col2">
-    <a href="{% url about %}" class="header">{% trans "About" %}</a><br />
-    <a href="{% url terms %}">{% trans "Terms of Service" %}</a><br />
-    <a href="{% url privacy %}">{% trans "Privacy Policy" %}</a><br />
-    <a href="{% url dmca %}">{% trans "DMCA Notice" %}</a><br />
+    <a class="header" href="{% url home %}">{% trans "Legal" %}</a><br />
+    <a href="{% url terms %}">{% trans "Terms of service" %}</a><br />
+    <a href="{% url privacy %}">{% trans "Privacy policy" %}</a><br />
+    <a href="{% url dmca %}">{% trans "Dmca notice" %}</a><br />
 </div>
 <div id="col3">
-    <a href="{% url about %}" class="header">{% trans "About" %}</a><br />
-    <a href="{% url terms %}">{% trans "Terms of Service" %}</a><br />
-    <a href="{% url privacy %}">{% trans "Privacy Policy" %}</a><br />
-    <a href="{% url dmca %}">{% trans "DMCA Notice" %}</a><br />
+    <a class="header" href="{% url home %}">{% trans "Service" %}</a><br />
 </div>
 <div id="col4">
-  {% trans "&copy; 2008 &lt;your company&gt;" %}<br /><br />
-    design by <a href="http://durdn.com/blog" class="header">durdn</a> inspired by <a href="http://getdropbox.com">dropbox</a></div>
+    &copy; 2008-2009 <a href="http://evil-giraffe.com">Evil Giraffe</a><br />
+</div>
 {% endblock %}
+

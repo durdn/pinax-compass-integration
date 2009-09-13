@@ -1,0 +1,34 @@
+.uniForm { margin: 0; padding: 0; position: relative; z-index: 1; }
+.uniForm fieldset { border: none; margin: 0; padding: 0; position: relative; }
+.uniForm fieldset legend { margin: 0; padding: 0; }
+.uniForm .ctrlHolder, .uniForm .buttonHolder { margin: 0; padding: 0; clear: both; }
+.uniForm:after, .uniForm .buttonHolder:after { content: "."; display: block; height: 0; line-height: 0; font-size: 0; clear: both; min-height: 0; visibility: hidden; }
+.uniForm .ctrlHolder:after, .uniForm .ctrlHolder .multiField:after { content: "."; display: block; height: 0; line-height: 0; font-size: 0; clear: both; min-height: 0; visibility: hidden; }
+.uniForm .inlineLabel { width: auto; float: none; margin: 0; display: block; }
+.uniForm .inlineLabel:after { content: "."; display: block; height: 0; line-height: 0; font-size: 0; clear: both; min-height: 0; visibility: hidden; }
+.uniForm .inlineLabels .inlineLabel, .uniForm .blockLabels .inlineLabel { width: auto; float: none; margin: 0; display: block; }
+.uniForm .inlineLabel input, .uniForm .inlineLabels .inlineLabel input, .uniForm .blockLabels .inlineLabel input { border: none; padding: 0; margin: 0; }
+.uniForm label, .uniForm .label { display: block; float: none; padding: 0; line-height: 100%; width: auto; }
+.uniForm .blockLabels label, .uniForm .blockLabels .label { display: block; float: none; padding: 0; line-height: 100%; width: auto; }
+.uniForm .textInput { float: left; }
+.uniForm .blockLabels .textInput, .uniForm .blockLabels .fileUpload { float: left; }
+.uniForm .selectInput { float: left; }
+.uniForm .blockLabels .selectInput, .uniForm .blockLabels select { float: left; }
+.uniForm textarea, .uniForm .blockLabels textarea { float: left; }
+.uniForm .formHint, .uniForm .blockLabels .formHint { float: right; margin: 0; clear: none; }
+.uniForm .multiField, .uniForm .blockLabels .multiField { width: auto; float: left; }
+.uniForm .multiField .inlineLabel, .uniForm .blockLabels .multiField .inlineLabel { display: block; margin: 0 0 .5em 0; }
+.uniForm .multiField .blockLabel, .uniForm .blockLabels .multiField .blockLabel { float: left; width: auto; margin: 0; }
+.uniForm .multiField .blockLabel .textInput, .uniForm .multiField .blockLabel .selectInput, .uniForm .multiField .blockLabel select { width: 100%; margin: 0; }
+.uniForm .blockLabels .multiField .blockLabel .textInput, .uniForm .blockLabels .multiField .blockLabel .selectInput, .uniForm .blockLabels .multiField .blockLabel select { width: 100%; margin: 0; }
+.uniForm .inlineLabels label, .uniForm .inlineLabels .label { float: left; margin: 0; padding: 0; line-height: 100%; position: relative; }
+.uniForm .inlineLabels .textInput, .uniForm .inlineLabels .fileUpload, .uniForm .inlineLabels .selectInput, .uniForm .inlineLabels select, .uniForm .inlineLabels textarea { float: left; }
+.uniForm .inlineLabels .formHint { clear: both; float: none; }
+.uniForm .inlineLabels .multiField { float: left; }
+.uniForm .inlineLabels .multiField .blockLabel .textInput, .uniForm .inlineLabels .multiField .blockLabel .selectInput, .uniForm .inlineLabels .multiField .blockLabel select { display: block; width: 100%; float: none; }
+.uniForm .inlineLabels .multiField select { float: left; }
+.uniForm label em, .uniForm .label em { position: absolute; left: -7px; }
+.uniForm .blockLabels label em, .uniForm .blockLabels .label em { position: absolute; left: -7px; }
+.uniForm .inlineLabels label em, .uniForm .inlineLabels .label em { display: block; position: absolute; left: auto; right: 0; font-style: normal; font-weight: bold; }
+.uniForm .inlineLabel em { position: absolute; left: 7px; }
+.uniForm .col { float: left; }
