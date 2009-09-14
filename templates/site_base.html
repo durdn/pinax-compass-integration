@@ -25,11 +25,10 @@
       <ul class="mainmenu">
           <li><a href="{% url profile_detail user %}">{% trans "Profile" %}</a></li>
           <li><a href="{% url notification.views.notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
-          <li><a href="http://tuttivisti.uservoice.com">{% trans "Feedback" %}</a></li>
       </ul>
     {% else %}
       <ul class="mainmenu">
-          <li><a href="http://tuttivisti.uservoice.com">{% trans "Feedback" %}</a></li>
+          <li><a href="#">{% trans "Empty" %}</a></li>
       </ul>
     {% endif %}
 {% endblock %}
