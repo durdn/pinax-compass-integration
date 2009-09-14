@@ -101,113 +101,6 @@ td
   :margin 0 auto
   :padding 10px
 
-  #profile
-    #info
-      +alpha
-      +grid(2,16)
-      :margin-bottom 10px
-      h1
-        :color #000
-    #list
-      +grid(7,16)
-      :margin-bottom 10px
-      .movie
-        &:hover
-          :background #eeeeee
-        :border 1px solid #dddddd
-        :margin-top 8px
-        :margin-bottom 8px
-        :padding 8px
-        +curved
-        .thumb
-          :position inherit
-          :display inline
-          :height 140px
-        .text
-          :position absolute
-          :display inline
-          :margin-left 10px
-        .stars
-          :display inline
-          :position inherit
-          :margin-right 5px
-          :margin-left 10px
-          .fav-link
-            :display inline
-          h4
-            :display inline
-    #unused
-      +grid(3,16)
-      +omega
-      :margin-bottom 10px
-
-#last-seen
-  :margin-bottom 10px
-  .movie
-    +grid(6,16)
-    &:hover
-      :background #eeeeee
-    :border 1px solid #dddddd
-    :margin-top 8px
-    :margin-bottom 8px
-    :padding 8px
-    +curved
-    .thumb
-      :position inherit
-      :display inline
-      :height 140px
-    .text
-      :position absolute
-      :display inline
-      :margin-left 10px
-    .stars
-      :display inline
-      :position inherit
-      :margin-right 5px
-      :margin-left 10px
-      .fav-link
-        :display inline
-      h4
-        :display inline
-        
-#popular
-  #genre
-    +alpha
-    +grid(2,16)
-    :margin-bottom 10px
-  #list
-    +grid(8,16)
-    :margin-bottom 10px
-    .movie
-      &:hover
-        :background #eeeeee
-      :border 1px solid #dddddd
-      :margin-top 8px
-      :margin-bottom 8px
-      :padding 8px
-      +curved
-      .thumb
-        :position inherit
-        :display inline
-        :height 140px
-      .text
-        :position absolute
-        :display inline
-        :margin-left 10px
-      .stars
-        :display inline
-        :position inherit
-        :margin-right 5px
-        :margin-left 10px
-        .fav-link
-          :display inline
-        h4
-          :display inline
-  #cut
-    +grid(2,16)
-    +omega
-    :margin-bottom 10px
-
 #footer
   +dots-top
   :color #777777
@@ -305,47 +198,6 @@ textarea
   :background = !secondary_color
   :padding 5px 10px 5px 10px
   :border = !border_notices
-  #close-button
-    :position relative
-    :float right
-
-#movielist
-  :font-size 12px
-  :font-weight bold
-  #list-view-type
-    :font-weight normal
-    :font-size 11px
-    :display inline
-  #filters
-    :font-weight normal
-    :font-size 11px
-    :display inline
-
-#movielist-thumb td, th, tr
-  margin: 0px 2px 0px 2px
-  padding: 2px
-
-#movielist td, th, tr
-  margin: 0px 3px 0px 3px
-  padding: 2px
-
-.movie-fragment
-  +grid(13,16)
-  .thumbnail
-    +grid(3,16)
-  .data
-    +grid(8,16)
-    :padding-bottom 10px
-
-.extended-list
-  .saved_date
-    +grid(11,16)
-    +omega
-
-#search
-  #hide-search-box
-    :position relative
-    :float right
 
 #tabhead
   +dots
@@ -357,7 +209,7 @@ textarea
     :padding-top 0
 
     img
-      :width 315px
+      :width 236px
       :height 62px
       :margin-top 20px
 
@@ -405,20 +257,6 @@ textarea
       :height 40px
       :display inline
       :margin-top 8px
-    #reputation-block
-      :position inherit
-      :top 15px
-      :margin-left 3px
-      :margin-top 5px
-      :display inline
-      #reputation
-        :display inline
-        #level-bar
-          :display inline
-          :width 50px
-          :padding 3px
-          :background-color transparent
-          :background-image url(/site_media/img/bar.gif)
 
 ul
   &.errorlist
@@ -741,23 +579,3 @@ legend
     :margin 0
     :background = !secondary_color
     :border 1px solid #aeceef
-
-#list
-  ul
-    .responses
-    :border 1px solid #ff0000
-    :padding 0px
-    li
-      :padding-top 10px
-      :padding-bottom 10px
-      :list-style-type none
-      .meta
-        :display inline
-        .avatar
-          :display inline
-        .details
-          :position inherit
-          :top 0px
-          :display inline
-        .body
-          :display inline
