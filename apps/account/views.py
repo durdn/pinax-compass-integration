@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect, HttpResponseForbidden, Http404
+from django.http import HttpResponse,HttpResponseRedirect, HttpResponseForbidden, Http404
 from django.db.models import Q
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
@@ -18,6 +18,8 @@ from account.forms import SignupForm, AddEmailForm, LoginForm, \
 from emailconfirmation.models import EmailAddress, EmailConfirmation
 
 from apps.easyopenid.models import OpenidProvider
+
+from simplejson import dumps
 
 association_model = models.get_model('django_openid', 'Association')
 if association_model is not None:
@@ -263,3 +265,11 @@ def other_services_remove(request):
     ).delete()
     request.user.message_set.create(message=ugettext(u"Removed twitter account information successfully."))
     return HttpResponseRedirect(reverse("acct_other_services"))
+
+def messages(request):
+    if request.user.is_authenticated():
+        ms = request.user.get_and_delete_messages()
+        return HttpResponse(dumps(ms))
+    else:
+        return HttpResponse(dumps(False))
+

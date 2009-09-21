@@ -28,4 +28,7 @@ urlpatterns = patterns('',
 
     # ajax validation
     (r'^validate/$', 'ajax_validation.views.validate', {'form_class': SignupForm}, 'signup_form_validate'),
+
+    #messages
+    url(r'^messages$', 'account.views.messages',name="account_messages"),
 )
