@@ -19,6 +19,7 @@
         <script src="{{ MEDIA_URL }}uni_form/uni-form.jquery.js" type="text/javascript"></script>
 
         <script src="{{ MEDIA_URL }}js/jquery.jgrowl_minimized.js" type="text/javascript"></script>
+        <script src="{{ MEDIA_URL }}js/sammy.min.js" type="text/javascript"></script>
         <!--  <script src="{{ MEDIA_URL }}js/soundmanager2.js" type="text/javascript"></script> -->
         <script src="{{ MEDIA_URL }}js/sndmgr.js" type="text/javascript"></script>
  
@@ -65,6 +66,8 @@
                 {% block body %}
                 {% endblock %}
                 
+              <a href="#/test">activate</a> <a href="#/">deactivate</a> sammy test<br />
+              <div id="test">empty space</div>
             </div>
             {% endblock %}
             
@@ -75,7 +78,24 @@
           <script type="text/javascript">
             soundManager.url = "{{ MEDIA_URL }}swf/";
             soundManager.debugMode = false;
+            spinning_gif = '<img src="/site_media/img/spin/89.gif" />';
             $(document).ready(function(){
+
+              //sammy routes setup
+              app = $.sammy(function() { with(this) {
+                get('#/test', function() { with(this) {
+                  $('#test').html(spinning_gif);
+                }});
+                get('#/', function() { with(this) {
+                  $('#test').html("empty space");
+                }});
+              }});
+
+              $(function() {
+                app.run();
+              }); //end sammy routes setup
+                
+              //get messages if user is logged in
               {% if user.is_authenticated %}
               $.get('{% url account_messages %}', function(data) {
                 var messages = eval('(' + data + ')');
@@ -90,7 +110,7 @@
                   }
                 });
               });
-              {% endif %}
+              {% endif %} //end get messages
             });
           </script>
           {% block extra_body %}{% endblock %}
