@@ -132,6 +132,10 @@ INSTALLED_APPS = (
     'signup_codes',
     'about',
     'django.contrib.admin',
+    'django_extensions',
+
+    #base
+    'easyopenid',
 
 )
 
@@ -152,7 +156,7 @@ AUTH_PROFILE_MODULE = 'basic_profiles.Profile'
 NOTIFICATION_LANGUAGE_MODULE = 'account.Account'
 
 ACCOUNT_OPEN_SIGNUP = True
-ACCOUNT_REQUIRED_EMAIL = False
+ACCOUNT_REQUIRED_EMAIL = True
 ACCOUNT_EMAIL_VERIFICATION = False
 
 EMAIL_CONFIRMATION_DAYS = 2
