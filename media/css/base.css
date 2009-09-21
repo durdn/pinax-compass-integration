@@ -34,7 +34,13 @@ td { margin: 0; border: 0; padding: 0; }
 #site_wide_announcements { background: yellow; padding: 10px; text-align: center; }
 #site_wide_announcements ul { padding: 0; margin: 0; }
 
-h1 { margin: 0; font-size: 21px; }
+h1 { margin: 0; font-size: 23px; font-weight: normal; color: #222222; }
+
+h2 { padding-top: 10px; font-size: 18px; font-weight: normal; color: #222222; }
+
+h3 { font-weight: normal; }
+
+p { font-size: 13px; line-height: 21px; }
 
 form th { text-align: left; }
 form.signup input[type="submit"], form.login input[type="submit"] { margin: 20px 0; font-size: 14pt; }
